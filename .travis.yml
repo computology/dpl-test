@@ -1,0 +1,13 @@
+script:
+- make check
+deploy:
+  provider: packagecloud
+  edge: true
+  username: joe
+  repository: privtest
+  skip_cleanup: true
+  token:
+    secure: oCmHxb4IXResFnmhCnoN7Rxuqs4cucwIbohEEQ6PdJfVkK0jSLN2AM7r8hJ2NAAiPOwz+yYmf05kUZXBciOZVxOMNvEHB9v00ozDpK/uIKEJYRic0g82T4idekKZ8QNitVOKLAfBLV0urHW5hbAGWhyf70PoxKLStzQE8DzOn+o=
+  dist: ubuntu/precise
+  on:
+    branch: master
